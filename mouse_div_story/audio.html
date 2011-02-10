@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	
+	<title>HTML</title>
+	
+	<style>
+	
+	
+	div{
+		
+		opacity:0;
+		
+		
+	}
+	
+	
+	</style>
+	
+	<script src="jquery.js"></script>
+	
+	
+	
+	<script stype="text/javascript">
+	
+	jQuery(document).ready(function(){
+		
+		
+		
+		$(document).bind('keypress', function(e) {
+		        if(e.keyCode==13){
+
+					console.log(e);
+
+
+		        }
+		});
+		
+		
+			/*
+			var sounds = new Array("sound1.ogg","sound2.ogg", "sound3.ogg", "sound4.ogg");
+		
+			var audioElement = document.createElement('audio');
+			audioElement.setAttribute('src', 'audio/' + sounds[] +'');
+			audioElement.load()
+			audioElement.addEventListener("load", function() { 
+				audioElement.play(); 
+				$(".duration span").html(audioElement.duration);
+				$(".filename span").html(audioElement.src);
+			}, true);
+			
+			*/
+
+
+			var sounds = new Array("sound1.ogg","sound2.ogg", "sound3.ogg", "sound4.ogg");
+			
+
+			$(document).click(function() {
+					
+					
+					
+					for(var i = 0; i < 5; i ++){
+					
+					var randSound = parseInt(Math.random()*4);
+				
+					var audioElement = document.createElement('audio');
+					
+					audioElement.setAttribute('src', 'audio/' + sounds[randSound] +'');
+					
+					audioElement.load()
+					
+					audioElement.addEventListener("load", function() { 
+						
+						audioElement.play(); 
+						
+						$(".duration span").html(audioElement.duration);
+						
+						$(".filename span").html(audioElement.src);
+					
+					}, true);
+				
+				
+				
+					
+				audioElement.play();
+				
+				audioElement.volume = 1;
+				
+				console.log(i);
+				
+				$('body').append('<div style="float:left; background:#000; height:100px; width:100px; border-radius:50px;" class="d"></div>');
+				
+				$('.d').fadeTo(500,.8);
+			}
+				
+				
+				
+				
+			
+			
+			
+			
+				
+			
+				
+			});
+		
+			
+				
+		
+		
+		
+		});
+		
+		
+		
+
+	
+	
+	</script>
+	
+
+
+</head>
+
+
+
+<body>
+
+
+</body>
+
+
+
+
+
+</html>

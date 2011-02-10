@@ -1,0 +1,191 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+
+function yeah(y,x){
+	
+	
+	// Array of images for backgrounds of divs
+
+	
+	var gifs = new Array("gifs/fence.gif", "gifs/snow.gif", "gifs/reeds.gif", "gifs/line.gif");
+	
+
+	
+	//Random number of DIVS
+	
+	var divs = Math.floor((Math.random()*6)+4);
+	
+	
+	
+	// Loop to set number of divs drawn on click
+	
+	
+	
+	for(var i=0; i<divs; i++){
+		
+		// First Random number for array
+
+		var ran_gif = Math.floor(Math.random()*6);
+		
+		
+		//Random Size, effects size of DIV
+		
+	
+
+		var size = Math.floor(Math.random() * 200);
+		
+		
+		//Random values to effect placement of divs on the page
+		
+		var move = Math.floor(Math.random()*120);
+		
+		var move2 = Math.floor(Math.random()*120);
+		
+		
+		//Switch move value to negative for greater variety
+		
+		if(ran_gif <=2){
+			
+			move = -move;
+			
+		}
+		
+		if(ran_gif <=2){
+
+			move2 = -move2;
+
+		}
+		
+		
+		var fade_rand = Math.floor(Math.random()*1500+200);
+		
+		var xpos = x+move2;
+		
+		var ypos = y+move;
+		
+	
+	
+		
+	//Draw the divs using CSS to define all the propoerties
+
+	$('body').append('<div class="circle" style="position:absolute; top:'+ ypos +'px; left:'  + xpos +'px; background:url('+ gifs[ran_gif] +') #fff;  width:' + size + 'px; height:'+ size +'px; border-radius:150px; "></div>');
+	
+
+
+
+	
+	
+	
+	$('.circle').fadeTo(fade_rand, 0.0);
+  
+
+}	
+	
+	
+	console.log(divs);
+	}
+	
+	
+function yeahDelay(y2, x2, del){
+	
+	
+	
+	setTimeout("yeah(" + y2 + "," + x2 + ")"  , del);
+	
+}
+	
+	
+
+jQuery(document).ready(function(){
+	$(document).click(function(a){
+		
+		yeah(a.pageY, a.pageX);
+		
+		
+		
+		var move = Math.floor(Math.random()*4);
+		
+		var move_value = Math.floor(Math.random()*150);
+		
+		var move_value2 = Math.floor(Math.random()*150);
+		
+		var move_value3 = Math.floor(Math.random()*150);
+		
+		var move_value4 = Math.floor(Math.random()*150);
+		
+		
+		
+		if(move <=1){
+			
+			move_value = move_value;
+			
+			move_value2 = -move_value2;
+			
+			move_value4 = -move_value4;
+			
+			
+		}
+		else{
+			
+			move_value = -move_value;
+			
+			move_value3 = move_value3;
+			
+			
+		}
+		
+		
+		
+		yeahDelay((a.pageY+move_value4),(a.pageX+move_value), 250);
+		
+		yeahDelay((a.pageY+move_value3),(a.pageX+move_value2), 500);
+		
+		yeahDelay((a.pageY+move_value2),(a.pageX+move_value4), 750);
+		
+	    
+			
+			
+			
+			
+		
+		
+		
+		
+		});
+	
+
+
+
+
+})
+</script>
+
+<style>
+body{
+	
+background:#fff;
+
+overflow:hidden;	
+
+}
+
+.circle{
+	
+	opacity:.5;
+	
+}
+
+</style>
+
+
+<body>
+
+
+
+
+
+
+</body>
+</html>

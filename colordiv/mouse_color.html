@@ -1,0 +1,49 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+   $(document).mousemove(function(a){
+	
+	var rand = Math.random() * 150;
+	
+	var size = Math.floor(rand);
+	
+	var gifs = new Array();
+	
+	gifs[0] = 
+	
+	
+
+	$('body').append('<div class="circle" style="position:absolute; top:'+ a.pageY +'px; left:'  + a.pageX +'px; background:#fff;  width:' + size + 'px; height:'+ size +'px; border-radius:50px; "></div>');
+
+	$('.circle').fadeTo((size*30), 0.0);
+   }); 
+})
+</script>
+
+<style>
+body{
+	
+background:#333;	
+
+}
+
+.circle{
+	
+	opacity:.5;
+	
+}
+
+</style>
+
+
+<body>
+
+
+
+
+
+
+</body>
+</html>

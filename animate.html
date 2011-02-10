@@ -1,0 +1,130 @@
+<html>
+
+<head>
+	
+	<title>css animation</title>
+	
+	
+
+	
+	<style>
+
+
+
+		
+
+	
+	#content{
+		height:100px;
+		width:400px;
+		margin-left:300px;
+		position:absolute;
+		
+		
+	}
+	
+	#circle, #circle-2, #circle-3, #circle-4{
+			-webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;
+			
+			border:1px solid #000;
+			border-radius: 50px;
+			width:50px;
+			height:50px;
+			position:absolute;
+			left:0px;
+			margin-left:200px;
+			background:#000;
+			
+		
+	}
+	
+	
+
+	
+		
+	  #circle:hover{
+		left:-50px;
+		top:70px;
+		background:#eef;
+		opacity:.5;
+		
+		
+	}
+	
+	
+	
+	
+	 #circle-2:hover{
+		
+			left:-100px;
+
+			top:60px;
+			opacity:.5;
+			background:#ffe;
+		
+		
+	}
+
+	
+	
+	 #circle-3:hover{
+		
+			left: 50px;
+
+			top:50px;
+			opacity:.5;
+			background:#00ff00;
+		
+	}
+
+	 #circle-4:hover{
+		
+		left:-50px;
+		top:40px;
+		background:#ff0000;
+		opacity:.5;
+		
+		
+	}
+
+	
+	
+	</style>
+	
+	
+</head>
+
+
+
+
+<body>
+
+<div id="content" style="width:800px; margin-left:auto; margin-right:auto;">
+
+	<div id="circle"></div>
+	
+	<div id="circle-2"></div>
+	
+	
+	<div id="circle-3"></div>
+	
+	
+	<div id="circle-4"></div>
+	
+
+
+</div>
+
+
+<section id="line-intro" class="line" data-canvasline="Line" data-top="215" data-coord="95,0,450,601"> 
+     <canvas id="canvas-intro"></canvas> 
+    </section>
+	
+	
+</body>
+
+
+
+
+
+</html>

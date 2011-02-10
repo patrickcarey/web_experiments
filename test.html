@@ -1,0 +1,108 @@
+<html>
+
+
+
+<head>
+
+
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+ 
+
+	$('#hit').click(function(){
+		
+		
+		$('#blue').animate({
+		    width: 'toggle'},
+			500
+			)
+			
+			
+			$('#red').animate({
+			    width: 'toggle'},
+				800
+				)
+		
+		
+	});
+
+
+
+
+});
+
+
+
+
+</script>
+
+<style>
+
+
+
+#blue{
+	
+	background:#eef;
+	
+	width:500px;
+	height:50px;
+	
+	display:none;
+	
+	
+	
+	
+}
+
+#red{
+	
+	
+	background:#AD3251;
+	
+	width:650px;
+	height:50px;
+	
+	display:none;
+	
+	
+}
+
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+
+<a id="hit">Hit</a>
+
+
+<div id="blue"></div>
+
+<div id="red"></div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</body>
+
+</html>

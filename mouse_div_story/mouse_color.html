@@ -1,0 +1,55 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+   $(document).mousemove(function(a){
+	
+	var rand = Math.random() * 150;
+	
+	var size = Math.floor(rand);
+	
+	var gifs = new Array("gifs/fence,gif", "gifs/snow.gif", "gifs/reeds.gif", "gifs/line.gif");
+	
+	var rand2 = Math.random()*6;
+	
+	var ran_gif = Math.floor(rand2);
+	
+	
+	
+	
+
+	$('body').append('<div class="circle" style="position:absolute; top:'+ a.pageY +'px; left:'  + a.pageX +'px; background:url('+ gifs[ran_gif] +') #fff;  width:' + size + 'px; height:'+ size +'px; border-radius:150px; "></div>');
+
+	$('.circle').fadeTo((size*20), 0.0);
+   }); 
+})
+
+
+</script>
+
+<style>
+body{
+	
+background:#fff;	
+
+}
+
+.circle{
+	
+	opacity:.5;
+	
+}
+
+</style>
+
+
+<body>
+
+
+
+
+
+
+</body>
+</html>

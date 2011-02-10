@@ -1,0 +1,16 @@
+body{
+	
+	-webkit-transition: background 0.5s ease;
+	
+	background:#000;
+	
+	
+}
+
+@media screen and (max-width: 600px) {
+    body{
+	
+	background:#fff;
+	
+	}
+}

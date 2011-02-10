@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	
+	<title>HTML</title>
+	
+	<style>
+	
+	
+	div{
+		
+		opacity:0;
+		
+		
+	}
+	
+	
+	</style>
+	
+	<script src="jquery.js"></script>
+	
+	
+	
+	<script stype="text/javascript">
+	
+	jQuery(document).ready(function(){
+		
+		
+		
+			$(document).keypress(function(e){
+						
+						var randSound = parseInt(Math.random()*4);
+						
+
+						var sounds = new Array("sound1.ogg","sound2.ogg", "sound3.ogg", "sound4.ogg");
+
+						var audioElement = document.createElement('audio');
+						audioElement.setAttribute('src', 'audio/' + sounds[randSound] +'');
+						
+						audioElement.load()
+						audioElement.addEventListener("load", function() { 
+							audioElement.play(); 
+							$(".duration span").html(audioElement.duration);
+							$(".filename span").html(audioElement.src);
+						}, true);
+
+				//console.log(e.which);
+				
+				if(e.which == 122){
+					
+					
+					audioElement.setAttribute('src', 'audio/' + sounds[2] +'');
+					
+					audioElement.load()
+					audioElement.addEventListener("load", function() { 
+						audioElement.play(); 
+						$(".duration span").html(audioElement.duration);
+						$(".filename span").html(audioElement.src);
+					}, true);
+					
+					audioElement.play();
+
+					audioElement.volume = 1;
+					
+					var size = parseInt(Math.random()*100)+50;
+					
+					$('body').append('<p class="circle"  style="opacity:.7; color:#999; height:'+ size +'px; width:'+ size +'px; background:#000; border-radius:50px; top:0; left:0; position:absolute;"></p>');
+					
+					$('.circle').fadeTo(1000,0);
+				}
+				
+				
+				
+				if(e.which == 120){
+					
+					audioElement.setAttribute('src', 'audio/' + sounds[3] +'');
+					
+					audioElement.load()
+					audioElement.addEventListener("load", function() { 
+						audioElement.play(); 
+						$(".duration span").html(audioElement.duration);
+						$(".filename span").html(audioElement.src);
+					}, true);
+					
+					audioElement.play();
+					
+				
+
+					audioElement.volume = 1;
+					
+				
+					
+					
+					
+					
+				}
+				
+				if(e.which == 99){
+					
+					audioElement.setAttribute('src', 'audio/' + sounds[3] +'');
+					
+					audioElement.load()
+					audioElement.addEventListener("load", function() { 
+						audioElement.play(); 
+						$(".duration span").html(audioElement.duration);
+						$(".filename span").html(audioElement.src);
+					}, true);
+					
+					audioElement.play();
+
+					audioElement.volume = 1;
+					
+				}
+				
+						
+						
+					
+				
+
+
+
+					
+
+
+			});
+		
+		
+		
+			
+			
+			
+			
+
+				
+		
+		
+		
+		});
+		
+		
+		
+
+	
+	
+	</script>
+	
+
+
+</head>
+
+
+
+<body>
+
+
+</body>
+
+
+
+
+
+</html>
